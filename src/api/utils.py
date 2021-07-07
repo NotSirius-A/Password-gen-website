@@ -40,7 +40,7 @@ def is_valid_APIrequest_custom(traits, quantity):
             quantity = int(quantity)
 
         if quantity > MAX_QUANTITY or quantity < MIN_QUANTITY:
-            quantity.append(
+            errors['errors'].append(
                     f"'quantity' must be in range <{MIN_QUANTITY};{MAX_QUANTITY}>, not {quantity}. ")
 
     except ValueError as e:
