@@ -1,0 +1,99 @@
+ul {
+    /* for django error messages */
+    list-style-type: none;
+    border-radius: inherit;
+    color:rgb(214, 13, 13);
+    font-weight: bold;
+}
+
+.generator-container {
+    background-color: rgba(248, 248, 248, 1);
+    border: 1px solid lightgrey;
+    border-radius: 0.8em;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 6px 0px;
+    margin-top: 15%;
+}
+
+.generator-form {
+    background-color: inherit;
+    border-radius: inherit;
+}
+
+.generator-form-fields {
+    display: flex;
+    margin-top: 0;
+    margin-bottom: 15px;
+    /* justify-content: space-between; */
+    padding: 15px 10% 15px 10%;
+    border: 1px solid rgba(248, 248, 248, 0);
+    border-bottom: 1px solid lightgrey;
+}
+
+.generator-form-fields > p{
+    /* display: inline-flex; */
+    margin: auto;
+    width: auto;
+}
+
+.generator-form-fields p input[id=id_words], .generator-form-fields p select[id=id_symbols] {
+    width: 4em;
+    font-size: inherit;
+    padding: 0.3em 0.5em 0.3em 0.5em;
+    border-radius: 0.3em;
+}
+
+.generator-form-submit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    margin-bottom: 4%;
+    margin-top: 4%;
+}
+
+.generator-form-submit input{
+    height: 100%;
+    font-size: 120%;
+    padding: 1.1em 1.5em 1.1em 1.5em;
+    background-color: var(--theme-color);
+    border: 0.3em solid var(--theme-color);
+    font-weight: 500;
+    color: rgba(250, 250, 250, 1);
+    font-family: 'Poppins', sans-serif;
+    line-height: 0;
+    border-radius: 0.3em;
+    -webkit-appearance: none;
+}
+
+.generator-form-submit input:hover {
+    background-color: var(--theme-color-2nd);
+    border: 0.3em solid var(--theme-color-2nd);
+    cursor: pointer;
+}
+
+.generator-form-submit input:active {
+    background-color: var(--theme-color);
+    border: 0.3em inset var(--theme-color-2nd);
+    cursor: pointer;
+}
+
+.generator-output {
+    font-size: 120%;
+    margin: 0 1em 1em 1em;
+    border: 2px solid var(--theme-color);
+    word-wrap: break-word;
+    padding: 0.45em;
+    border-radius: 0.8em;
+
+    -khtml-user-select: text;
+    -webkit-touch-callout : text;
+    -moz-user-select: text;
+    -o-user-select: text;
+    user-select: text;
+}
+
+.generator-output::-moz-selection, .generator-output::selection {
+  color: white;
+  background: black;
+}

@@ -1,0 +1,40 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'my_core/css/styles.css' %}">
+    <link href='https://fonts.googleapis.com/css?family=Didact Gothic' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <title>Password Generator</title>
+</head>
+
+
+<body>
+    <div class="master-container">
+
+        <div class="left-filler"></div>
+
+        <header class="header-container">
+            {% include 'my_core/header.html' %}
+        </header>
+
+        <div class="right-filler"></div>
+
+        <footer class="footer-container">
+            {% include 'my_core/footer.html' %}
+        </footer>
+
+        <div class="main-content-container">
+            {% block content %}
+            replace me
+            {% endblock %}
+        </div>
+
+    </div>
+</body>
+
+</html>

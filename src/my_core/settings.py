@@ -20,12 +20,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'x)ur&8l+)ye#@lg9lsw!gbe&)jtp(a1nn%nfhym*(-4j95s69$'
+SECRET_KEY = 'x)ur&8l+)ye#@lg9dfgdfgdf&)jtp(a1nn%nfhym*(-4j95s69$'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -36,7 +36,12 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles',
+    'django.contrib.staticfiles',   
+
+    'api',
+    'passwordgen',
+    
+    'rest_framework'
 ]
 
 MIDDLEWARE = [
@@ -54,7 +59,11 @@ ROOT_URLCONF = 'my_core.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            Path(BASE_DIR, 'my_core', 'templates'),
+            Path(BASE_DIR, 'passwordgen', 'templates'),
+            Path(BASE_DIR, 'api', 'templates'),
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -118,3 +127,18 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATIC_ROOT = Path(BASE_DIR, 'assets')
+
+STATICFILES_DIRS = [
+    Path(BASE_DIR, 'my_core', 'static'),
+    Path(BASE_DIR, 'passwordgen', 'static'),
+    Path(BASE_DIR, 'api', 'static'),
+]
+
+
+REST_FRAMEWORK = {
+    'DEFAULT_RENDERER_CLASSES': [
+        'rest_framework.renderers.JSONRenderer',
+    ]
+}

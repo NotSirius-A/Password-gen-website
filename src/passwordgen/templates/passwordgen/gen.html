@@ -1,0 +1,26 @@
+{% extends 'my_core/base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="generator-container">
+        <link rel="stylesheet" href="{% static 'passwordgen/css/gen_styles.css' %}">
+
+        <form action="" method="get" class="generator-form">
+            <div class="generator-form-fields">
+                {{ form.as_p }}
+            </div>
+            <div class="generator-form-submit">
+                <input type="submit" value="Generate">
+            </div> 
+        </form>
+    
+        <div class="generator-output">
+        {% if password is not None %}
+            </span>{{ password }}</span>
+        {% else %}
+            <span>Something went wrong</span>
+        {% endif %}
+        </div>  
+
+    </div>
+{% endblock %}
