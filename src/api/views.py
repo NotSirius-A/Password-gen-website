@@ -1,7 +1,4 @@
-from typing import Type
-from django.shortcuts import render
-
-from rest_framework import serializers, viewsets
+from rest_framework import viewsets
 from rest_framework.response import Response
 
 from .serializers import CustomSerializer
@@ -13,15 +10,11 @@ from my_core.settings import BASE_DIR
 from pathlib import Path
 
 
-# from rest_framework import renderers
-
-
 class passwordgenAPIViewSet(viewsets.ViewSet):
     """
     rest_framework view set,
     handles API calls
     """
-    # renderer_classes = [renderers.JSONRenderer]
 
     def retrieve(self, request):
 
