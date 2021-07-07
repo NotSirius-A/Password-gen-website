@@ -1,0 +1,26 @@
+API endpoint : host/api/get/?params
+
+How to make an API call:
+    Make a request to <API endpoint> specifed on the top with the following URL parameters:
+        - 'words': int, number of words the passwords will have
+        - 'symbols: bool, True or False, whether passwords should contains symbols (True) or only spaces (False)
+        - 'quantity': int, number of passwords to be generated
+
+API responds with a JSON
+
+If there ARE NO errors:
+    {
+        'words': words-URL-param int,
+        'symbols': symbols-URL-param bool,
+        'quantity: quantity-URL-param int,
+        'passwords: [
+            list of length <quantity> containing generated passwords
+        ]
+    }
+
+If there ARE errors:
+    {
+        'errors': [
+            list containing all errors
+        ]
+    }
