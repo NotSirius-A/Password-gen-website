@@ -10,9 +10,9 @@ services:
     ports:
       - "80:80"
     depends_on:
-      - web
+      - passgen-djangocorn
 
-  web:
+  passgen-djangocorn:
     build:
       context: ./
       dockerfile: ./deployment/django/Dockerfile
