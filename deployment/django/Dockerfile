@@ -1,17 +1,15 @@
 FROM python:3.9.5-slim
 
-COPY requirements.txt /requirements.txt
+WORKDIR /my_app
 
-RUN set -ex \
-    && pip install --upgrade pip \
-    && pip install --no-cache-dir -r /requirements.txt
+COPY ./word_list/word_list_prod.csv ./word_list/word_list_prod.csv
 
-# WORKDIR /app
+COPY ./deployment/django/requirements.txt .
 
-ADD . .
+COPY ./src/ ./src/
 
 EXPOSE 8000
 
-COPY ./entry_point.sh /
-ENTRYPOINT ["sh", "/entry_point.sh"]
+COPY ./deployment/django/entry_point.sh .
+ENTRYPOINT ["sh", "entry_point.sh"]
 

@@ -150,3 +150,6 @@ REST_FRAMEWORK = {
         'rest_framework.renderers.JSONRenderer',
     ]
 }
+
+
+WORD_LIST_PATH = Path(BASE_DIR.parent, "word_list", "word_list_prod.csv")

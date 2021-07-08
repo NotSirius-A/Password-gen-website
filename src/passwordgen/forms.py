@@ -1,5 +1,4 @@
 from django import forms
-from django.core.exceptions import ValidationError
 from django.forms.widgets import NumberInput
 
 # this worked fine as a widget for integer field,

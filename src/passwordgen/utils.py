@@ -1,7 +1,6 @@
 from random import randint, choice
 import itertools
 import csv
-from re import S
 
 from passwordgen import forms
 

@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 from pathlib import Path
-from my_core.settings import BASE_DIR
+from my_core.settings import WORD_LIST_PATH
 
 from .utils import PasswordGen, str_to_bool
 from .forms import PassGenSettingsForm
@@ -19,7 +19,7 @@ def homepage_view(request, *args, **kwargs):
     form = PassGenSettingsForm(request.GET or None)
 
     password = None
-    gen = PasswordGen(Path(BASE_DIR.parent, 'word_list', 'word_list_prod.csv'))
+    gen = PasswordGen(WORD_LIST_PATH)
 
     # put relevant url params into a dict, for later processing
     traits = {
