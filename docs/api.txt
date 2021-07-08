@@ -8,19 +8,20 @@ How to make an API call:
 
 API responds with a JSON
 
-If there ARE NO errors:
-    {
-        'words': words-URL-param int,
-        'symbols': symbols-URL-param bool,
-        'quantity: quantity-URL-param int,
-        'passwords: [
-            list of length <quantity> containing generated passwords
-        ]
-    }
+Response:
+    If there ARE NO errors:
+        {
+            'words': words-URL-param int,
+            'symbols': symbols-URL-param bool,
+            'quantity: quantity-URL-param int,
+            'passwords: [
+                list of length <quantity> containing generated passwords
+            ]
+        }
 
-If there ARE errors:
-    {
-        'errors': [
-            list containing all errors
-        ]
-    }
+    If there ARE errors:
+        {
+            'errors': [
+                list containing all errors
+            ]
+        }
