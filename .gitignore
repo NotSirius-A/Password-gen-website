@@ -132,3 +132,5 @@ dmypy.json
 # Visual studio workspace
 workspace.code-workspace
 .code-workspace
+
+# Deployment secret files

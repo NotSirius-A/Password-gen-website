@@ -1,0 +1,33 @@
+version: '3.7'
+
+services:
+  db:
+    image: "postgres"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    env_file:
+      - postgres.env
+  ngnix:
+    build: ./nginx
+    volumes:
+      - static:/static
+    ports:
+      - "80:80"
+    depends_on:
+      - web
+  web:
+    build: .
+    expose:
+      - "8000"
+    volumes:
+      - static:/static
+    env_file:
+      - django.env
+    depends_on:
+      - db
+
+volumes:
+  static:
+  postgres_data:
+  
+    
