@@ -2,19 +2,6 @@ Functionality:
     - Generating passwords using unpopular english words
     - API for generating passwords
 
-Tools/Software:
-    - Python
-    - Django
-    - Django REST framework
-    - HTML/CSS frontend
-    - Docker
-    - Ngnix
-    - Gunicorn
-    - Git
-
-API:
-    - JSON response
-    - GET method with URL parameters
 
 There is no database.
 I've considered implementing a DB, however for this project it's pointless, for few reasons:

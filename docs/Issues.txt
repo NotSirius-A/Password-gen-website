@@ -1,0 +1,5 @@
+If this list is still here it means I didn't have time to take care of these issues:
+    - Mediocre file structure/managment
+    - Mediocre UI/UX
+    - Low quality code in some places (API code is pretty bad)
+    - Requests should be made with JS to an API, but at the time of writing this, I don't know JavaScript

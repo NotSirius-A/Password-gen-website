@@ -1,0 +1,9 @@
+Tools/Software:
+    - Python
+    - Django
+    - HTML/CSS frontend
+    - Docker/docker-compose
+    - Django REST framework
+    - PostgreSQL
+    - Nginx
+    - Gunicorn

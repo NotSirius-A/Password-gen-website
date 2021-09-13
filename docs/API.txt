@@ -1,4 +1,4 @@
-API endpoint : host/api/get/?params
+API endpoint : <hostname>/api/get/?params
 
 How to make an API call:
     Make a request to <API endpoint> specifed on the top with the following URL parameters:

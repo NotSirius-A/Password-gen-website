@@ -1,0 +1,9 @@
+Docker daemon + docker-compose required
+
+1. Edit .env inside src/my_core
+2. cd into the root directory of the project
+3. docker-compose up --build -d
+
+
+Disable:
+1. docker-compose down
